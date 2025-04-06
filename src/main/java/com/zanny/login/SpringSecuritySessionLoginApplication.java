@@ -1,4 +1,4 @@
-package com.zanny.spring_security_session_login;
+package com.zanny.login;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

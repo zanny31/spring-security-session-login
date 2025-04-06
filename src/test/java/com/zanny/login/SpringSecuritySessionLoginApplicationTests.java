@@ -1,4 +1,4 @@
-package com.zanny.spring_security_session_login;
+package com.zanny.login;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
