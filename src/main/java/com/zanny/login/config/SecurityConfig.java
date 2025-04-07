@@ -14,6 +14,7 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
+                // TODO: crsf 비활성화는 개발용, 운영 환경에서는 활성화 필요
                 .csrf(crsf -> crsf.disable())
                 .headers(headers -> headers.frameOptions(frame -> frame.disable()))
                 .authorizeHttpRequests((auth) -> auth
