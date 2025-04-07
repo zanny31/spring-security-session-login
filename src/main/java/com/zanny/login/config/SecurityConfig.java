@@ -18,8 +18,9 @@ public class SecurityConfig {
                 .csrf(crsf -> crsf.disable())
                 .headers(headers -> headers.frameOptions(frame -> frame.disable()))
                 .authorizeHttpRequests((auth) -> auth
-                        // TODO: h2-console 및 join 경로는 테스트용, 운영 환경에서는 제거 필요
-                        .requestMatchers("/h2-console/**", "/join", "/join.html").permitAll()
+                        // TODO: h2-console, join 및 dub 경로는 테스트용, 운영 환경에서는 제거 필요
+                        .requestMatchers("/h2-console/**", "/join", "/join.html", "/debug/auth", "/debug/session")
+                        .permitAll()
                         .anyRequest().authenticated())
                 .formLogin(withDefaults());
         return http.build();
